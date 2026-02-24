@@ -5,8 +5,8 @@
 const projects = {
   passgen: {
     title: "Password Generator",
-    link: "./../../projects/password-generator",
-    img: "./../../img/projects/passgen-big.jpg",
+    link: "./projects/password-generator",
+    img: "./img/projects/passgen-big.jpg",
     content: [
       "A modern and user-friendly password generator focused on both usability and security.",
       "Allows users to customize password length, character sets and letter casing. Includes a visual strength indicator (weak to strong) to provide immediate feedback. Сopy to clipboard functionality is also implemented for user convenience.",
@@ -18,8 +18,8 @@ const projects = {
 
   studygame: {
     title: "Study Adventure Game",
-    link: "./../../projects/key-click-adventures",
-    img: "./../../img/projects/studygame-big.jpg",
+    link: "./projects/key-click-adventures",
+    img: "./img/projects/studygame-big.jpg",
     content: [
       "An interactive mini-game designed to explore JavaScript event handling in a playful way.",
       "Users interact with blocks using mouse and keyboard actions (hover, click, key press). Some blocks contain short challenges — correct answers earn points.",
@@ -31,8 +31,8 @@ const projects = {
 
   todo: {
     title: "Todo App",
-    link: "./../../projects/todo",
-    img: "./../../img/projects/todo-big.jpg",
+    link: "./projects/todo",
+    img: "./img/projects/todo-big.jpg",
     content: [
       "A classic Todo application that many developers build at the start of their journey — reimagined with a clean and modern user experience.",
       "Supports task organization by status (active, completed, all), includes a counter for remaining tasks, and allows users to clear completed items. Data is persisted using local storage for a seamless experience across sessions.",
@@ -44,8 +44,8 @@ const projects = {
 
   quiz: {
     title: "Funny Simple Quiz",
-    link: "./../../projects/quiz-game",
-    img: "./../../img/projects/quiz-big.jpg",
+    link: "./projects/quiz-game",
+    img: "./img/projects/quiz-big.jpg",
     content: [
     "A classic quiz application designed to test knowledge through short and engaging questions.",
     "Features five questions with four possible answers each. Provides clear visual feedback on correct and incorrect answers, tracks the score, and allows users to retake the quiz.",
@@ -57,8 +57,8 @@ const projects = {
 
   quest: {
     title: "Mysterious Quest Game",
-    link: "./../../projects/quest-game",
-    img: "./../../img/projects/quest-big.jpg",
+    link: "./projects/quest-game",
+    img: "./img/projects/quest-big.jpg",
     content: [
       "An educational web-based quest game designed for high school students exploring programming and web development.",
       "The game guides players through ten progressively challenging levels, starting with HTML fundamentals and gradually introducing interactive JavaScript concepts. Each level presents tasks, hints, and mini-challenges. All wrapped in a fun and engaging story. Illustrations were generated using AI to enhance the visual experience.",
@@ -71,8 +71,8 @@ const projects = {
   
   landing: {
     title: "Fitness Landing Page",
-    link: "./../../projects/fitness-landing",
-    img: "./../../img/projects/landing-big.jpg",
+    link: "./projects/fitness-landing",
+    img: "./img/projects/landing-big.jpg",
     content: [
       "Fitness Club Landing Page",
       "A clean and visually engaging landing page built from a Figma design and slightly enhanced.",

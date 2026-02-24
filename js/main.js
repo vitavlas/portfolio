@@ -57,7 +57,11 @@ const menuLinks = document.querySelectorAll(".nav-list__link");
 
 menuLinks.forEach(link => {
 
-  if (link.getAttribute("href") === currentURL) {
+  // Change path for using GitHub Pages
+  const REPO_NAME = "/portfolio/";
+  const linkURL = link.getAttribute("href").replace("./", REPO_NAME);
+
+  if (linkURL === currentURL) {
     link.classList.add("nav-list__link--active");
   } else {
     link.classList.remove("nav-list__link--active");
