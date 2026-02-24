@@ -265,7 +265,7 @@ html, body {
   min-height: 695px;
   padding: 2.5rem 0;
   text-align: center;
-  background-image: url('/img/header-bg.png');
+  background-image: url('./../img/header-bg.png');
   background-size: auto;
   background-position: center center;
   background-repeat: no-repeat;
