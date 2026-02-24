@@ -1,0 +1,56 @@
+<!-------
+  TASO 8
+--------->
+
+<template id="level_8">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Yritetään hieman animointia Javascriptillä.<br><br>
+    Tee kuvalle ajastettu animaatio, joka tuo kuvan esiin 5 sekunnin kuluttua sivun lataamisesta. setTimeout()-funktio auttaa tässä tehtävässä. Jos opacityn arvo on 0, niin kuva on täysin näkymätön. Jos arvo on 1, niin kuva on täysin näkyvissä.<br><br>
+    1. Etsi tarinapeli.html tiedostosta tason 8 koodi.<br>
+    2. Lisää script-tägien sisälle terminalissa näkyvä koodi. Vain kysymysmerkillä merkattuihin kohtiin tarvitsee tehdä muutoksia.<br>
+    3. Määritä const-muuttujalle arvoksi <b>kuva</b> ja anna <b>document.getElementById("?")</b> id, jota skriptin halutaan käyttävän.<br>
+    4. Anna <b>?.style.opacity</b>:lle määrittelemäsi muuttuja ja aloitusarvo.<br>
+    5. Kuten edellisessä kohdassa, lisää <b>?.style.transition</b>:ille määrittelemäsi muuttuja.<br>
+    6. Jotta <b>style.transition</b> toimisi halutulla tavalla, niin sille täytyy määrittää hieman enemmän ominaisuuksia. Kirjoita "" sisällä olevan kysymysmerkin tilalle <b>opacity 0.5s ease-in-out</b>.<br>
+    7. Anna opacitylle lopetusarvo, johon animaatio päättyy kun kuva on näkyvä.
+    8. Jotta ajastin saadaa toimimaan, niin korvaa viimeinen kysymysmerkki luvulla 5000. setTimeout-funktio käyttää millisekunteja.<br>
+    9. Paina "Päivitä" ja katso toimiiko tekemäsi skripti.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const ? = document.getElementById("?");
+?.style.opacity = "?";
+
+setTimeout(function() {
+  ?.style.transition = "?";
+  ?.style.opacity = "?";
+  resolve();
+}, ? );
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+      // BEGIN
+        
+      // END
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 8</h2>
+    <!-- CONTENT -->
+     <img src="kuvat/Taso8.png" id="taso8kuva" alt="taso8">
+    <div class="game-workBlock__storyText">
+      Kalle palasi juhlasaliin. Pöydän alla odotti arkistokansion toinen osa, jossa näkyi ryhmä oppilaita vuosien takaa - kaikki kasvot peitetty. Viesti kertoi: "Varjoverkko ei unohda."
+    </div>
+  </story>
+  
+ </template>

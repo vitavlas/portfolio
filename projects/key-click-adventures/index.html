@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Comic+Relief:wght@400;700&family=Ribeye+Marrow&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Yllätysluukut</title>
+</head>
+<body>
+  <!-- MAIN CONTAINER -->
+  <main class="game__main-container game__main-container_start">
+    <!-- HEADER / GAME RULES DESC -->
+    <header class="game__desc-container">
+      <h2 class="game__name-head">&#127965;&#65039; Key & Click Adventures</h2> <!-- 🏝️ -->
+      <h3 class="game__desc-head">
+        Practice using JavaScript addEventListener<br>
+        method by playing funnny game.
+      </h3><p><!-- empty space between rows--></p>
+      <h3 class="game__desc-head">Are you ready to tackle a little puzzle?</h3>
+      <button type="button" id="game__desc-btn">Start!</button> <!-- START BUTTON -->
+    </header>
+    <!-- GAME BLOCKS -->
+    <div class="game-block__container_hidden">
+      <div class="game-block__cell game-block__cell_start"> <!-- mouseover -->
+        <p>Hi!</p>
+      </div> 
+      <div class="game-block__cell"> <!-- click -->
+        <p>Click</p>
+        <p class="game-block__spec-char">&#128071;</p>
+      </div> 
+      <div class="game-block__cell"> <!-- keydown -->
+        <!-- dynamic content goes here -->
+      </div> 
+      <div class="game-block__cell"> <!-- mousedown -->
+        <!-- dynamic content goes here -->
+      </div>
+      <div class="game-block__cell"> <!-- keyup -->
+        <p>Open!</p>
+        <p class="game-block__spec-char">&#128273;</p>
+      </div>
+      <div class="game-block__cell"> <!-- mouseup -->
+        <p>Empty?</p>
+        <p class="game-block__spec-char">&#128377;</p>
+      </div>
+      <div class="game-block__cell"> <!-- contextmenu -->
+        <p>Hmm…</p>
+        <p class="game-block__spec-char">&#128203;</p>
+        <p>what’s this?</p>
+      </div>
+      <div class="game-block__cell"> <!-- dblclick -->
+        <!-- dynamic content goes here -->
+      </div>
+      <div class="game-block__cell game-block__cell_finish"> <!-- mouseout -->
+        <p>See you!</p>
+      </div>
+    </div>
+    <!-- GAME STATISTICS -->
+     <div class="game__stats-footer_hidden">
+       <p>Score: <span id="game__stats-counter">0</span></p>
+     </div>
+  </main>
+  <!-- USER INTERACTIVE BLOCK -->
+  <div class="game__user-interact-box_hidden">
+    <label for="game__user-interact-input">Answer...</label>
+    <input type="text" id="game__user-interact-input" placeholder="Answer...">
+    <button type="button" id="game__user-interact-btn" disabled>&#128072;<!--👈--></button>
+  </div>
+  <!-- SCRIPTS -->
+   <script src="./js/script.js"></script>
+</body>
+</html>

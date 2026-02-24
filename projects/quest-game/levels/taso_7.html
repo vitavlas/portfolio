@@ -1,0 +1,55 @@
+<!-------
+  TASO 7
+--------->
+
+<template id="level_7">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Kokeillaan seuraavalla tasolla hieman Javascriptin perustoimintoja. Tee kuvalle klikkaustoiminto, joka himmentää kuvan näkyvyyden 50% ja palauttaa sen takaisin alkuperäiseen tilaan, kun kuvaa klikataan uudelleen. Opacity-arvoja voi muuttaa välillä 0 ja 1.<br><br>
+    1. Etsi tarinapeli.html tiedostosta tason 7 koodi.<br>
+    2. Lisää script-tägien sisälle terminalissa näkyvä koodi. Vain kysymysmerkillä merkattuihin kohtiin tarvitsee tehdä muutoksia.<br>
+    3. <b>const</b>-muuttujaa käytetään arvojen määrittelemiseen, johon myöhemmin voidaan viitata. Korvaa const jälkeinen kysymysmerkki sanalla "kuva" (ilman lainausmerkkejä). Tulet viittaamaan siihen myöhemmissä vaiheissa.<br>
+    4. <b>document.getElementById("")</b> hakee HTML-tiedostosta elementin sen ID:n avulla. Tässä kohtaa halutaan käyttää tason 7 kuvan id:tä.<br>
+    5. <b>addEventListener</b> on tapahtumakäsittelijä, jota käytetään liittämään tapahtuma haluttuun elementtiin. Jotta tapahtumakäsittelijä saadaan toimimaan, niin addEventListenerissä täytyy käyttää const kohdassa asetettua muuttujaa ja sulkujen sisälle <b>click</b>, jotta funktiosta saadaan klikattava.<br>
+    6. <b>if ja else</b> ovat ehtolausekkeita. Jotta skripti tietäisi minkä elementin tyylin halutaan muuttuvan sitä klikatessa, niin <b>.style.opacity</b> täytyy käyttää const-muuttujaa, joka määriteltiin skriptin ensimmäisellä rivillä.<br>
+    7. Lopuksi <b>.style.opacity</b>:lle täytyy asettaa arvot. Jos halutaan, että kuva on ennen klikkausta täysin näkyvissä, niin oletusarvoksi on asetettava 1. Kun kuvaa klikataan, niin skripti vaihtaa arvon 0. <b>Else</b> kohdassa skripti palauttaa arvon 1, jos 0 on jo käytössä.<br>
+    8. Paina "Päivitä" ja kokeile toimiiko tekemäsi skripti.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const ? = document.getElementById("?");
+?.addEventListener("?", function() {
+  if (?.style.opacity === "?") {
+    ?.style.opacity = "?";
+  } else {
+    ?.style.opacity = "?";
+  }
+  resolve();
+});
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+      // BEGIN
+        
+      // END
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 7</h2>
+    <!-- CONTENT -->
+     <img src="kuvat/Taso7.png" id="taso7kuva" alt="taso7">
+    <div class="game-workBlock__storyText">
+      Varaston nurkassa odotti seuraava vihje. Siellä oli paperi, jossa luki: "Olet lähellä keskusta. Mutta oletko valmis seuraavaan testiin?"
+    </div>
+  </story>
+
+ </template>

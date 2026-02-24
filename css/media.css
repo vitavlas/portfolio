@@ -1,0 +1,66 @@
+/* Mobile devices */
+
+@media (max-width: 600px) {
+  /* GENERAL */
+
+  .section-title {
+    margin-bottom: 1.875rem;
+  }
+
+  .section-subtitle {
+    margin-bottom: 0.625rem;
+  }
+
+  /* MENU NAV */
+  
+  .nav-row {
+    justify-content: space-between;
+  }
+
+  /* HEADER */
+
+  .header {
+    min-height: unset;
+  }
+
+  /* PROJECTS */
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  /* Project page */
+  .project-details__desc {
+    margin-bottom: 1.25rem;
+  }
+
+  /* SKILLS, ABOUT */
+
+  .content-list {
+    row-gap: 1.25rem;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 2.5rem 0 1.875rem;
+  }
+
+  .footer__wrapper {
+    row-gap: 1.25rem;
+  }
+
+  .social {
+    column-gap: 1.25rem;
+  }
+
+  .social__item {
+    width: 1.75rem;
+  }
+}
+
+@media (max-width: 478px) {
+  .dark-mode-btn {
+    order: 0;
+  }
+}

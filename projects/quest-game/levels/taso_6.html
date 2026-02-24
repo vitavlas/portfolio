@@ -1,0 +1,53 @@
+<!-------
+  TASO 6
+--------->
+
+<template id="level_6">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Testataan hieman CSS:n animointia.<br><br>
+    Kuvalle on annettu id "taso6kuva". Tee kuvalle animaatio, jonka avulla kuva ilmestyy näkyviin häivytyksestä 5s aikana.<br>
+    Animaation tyyppinä käytetään <b>fadeIn</b><br>
+    Tahtina <b>ease</b>.<br>
+    Ajaksi <b>5s</b>.<br><br>
+    Animaation tekemiseen tarvitaan @keyframes-sääntöä, joka määrittelee animaation vaiheet.<br> Animaatio alkaa tyhjästä, kun opacityn aloitusarvoksi annetaan 0. Animaatio päättyy, kun opacity saavuttaa lopetusarvon 1. Keyframesissa animaation tyyppi on <b>fadeIn</b>.<br><br>
+  
+    1. Avaa pelinCSS.css tiedosto ja lisää listan alimmaksi tarvittava koodi, jonka voit kopioida terminalista.<br>
+    2. Lisää #taso6kuvan animaatioon tarvittavat arvot tyyppi, tahti ja aika.<br>
+    3. Korvaa @keyframesin aloitus- ja lopetusarvot yläpuolella mainituilla numeroilla.<br>
+    4. Paina "Päivitä" ja katso toimiiko tekemäsi animaatio.<br>
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+#taso6kuva {
+  animation: tyyppi tahti ja aika
+}
+
+@keyframes tyyppi {
+    from {
+        opacity: aloitusarvo ;
+    }
+    to {
+        opacity: lopetusarvo;
+    }
+}
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 6</h2>
+    <!-- CONTENT -->
+     <img src="kuvat/Taso6.png" id="taso6kuva" alt="taso6">
+    <div class="game-workBlock__storyText">
+      Kellari oli pimeä ja kylmä. Kalle löysi laatikon metalliluukusta - sisällä oli muistitikku ja viesti: "Seuraa merkkejä ja yhdistä ne. Totuus alkaa paljastua."
+    </div>
+  </story>
+
+ </template>

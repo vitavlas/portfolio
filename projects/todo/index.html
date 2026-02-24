@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.png" type="image/png">
+  <title>Todo app</title>
+</head>
+<body>
+  
+  <div class="app-container">
+
+    <header class="header">
+      <h1>
+        <i class="fas fa-check-circle"></i>
+        My Tasks
+      </h1>
+      <p id="date"></p>
+    </header>
+
+    <!-- Add new task -->
+    <div class="todo-input">
+      <input type="text" id="task-input" placeholder="Add new task">
+      <button type="button" id="add-task">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="todo-filters">
+      <span data-filter="all" class="filter active">All</span>
+      <span data-filter="active" class="filter">Active</span>
+      <span data-filter="completed" class="filter">Completed</span>
+    </div>
+
+    <!-- Task list -->
+    <div class="todo-container">
+      <ul id="todo-list">
+        <!-- List of items appear after the user adds a task -->
+
+        <!-- <li class="todo-item">
+          <label class="checkbox-container">
+            <input type="checkbox" class="checkbox-todo">
+            <span class="checkmark"></span>
+          </label>
+          <span class="todo-item__text">Buy flowers</span>
+          <button type="button" class="btn-delete">
+            <i class="fas fa-times"></i>
+          </button>
+        </li> -->
+      </ul>
+
+      <div class="empty-state">
+        <i class="fas fa-clipboard-list"></i>
+        <p>No tasks yet</p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <footer class="stats">
+      <p id="stats-items-left">0 items left</p>
+      <button type="button" id="btn-clear-completed" class="btn-clear">Clear completed</button>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.contact {
+  height: 860px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: image-set(
+    url('./../../img/contacts/contact-form-bg.jpg') 1x,
+    url('./../../img/contacts/contact-form-bg@2x.jpg') 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact__title {
+  margin-bottom: 40px;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 1.75rem + 3.75vw, 4.563rem);
+  letter-spacing: 0.06em;
+  color: var(--accent-color);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 90px 0;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      image-set(
+        url('./../../img/contacts/contact-form-bg.jpg') 1x,
+        url('./../../img/contacts/contact-form-bg@2x.jpg') 2x
+      );
+  }
+}

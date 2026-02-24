@@ -1,0 +1,22 @@
+/* STYLESHEET FOR [FITNESS CLUB LANDING] */
+
+/* FONTS */
+@import url("./../fonts/bebasneue/bebasneue.css");
+@import url("./../fonts/roboto/roboto.css");
+
+
+/* BASE */
+
+@import url('./base/reset.css');
+@import url('./base/base.css');
+
+/* BLOCKS */
+
+@import url('./blocks/header.css');
+@import url('./blocks/section.css');
+@import url('./blocks/card-trainer.css');
+@import url('./blocks/beast-mode.css');
+@import url('./blocks/card-program.css');
+@import url('./blocks/contact.css');
+@import url('./blocks/form.css');
+@import url('./blocks/footer.css');

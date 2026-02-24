@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>KodeBasics tarinapeli</title>
+</head>
+<body>
+
+<!-------------------------
+  TARINAPELI GAME LEVELS
+-------------------------->
+
+<!-------
+  TASO 1
+--------->
+
+<template id="level_1">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+      Tervetuloa pelaamaan 9-viikkoa varten tehtyä pienimuotoista tarinapeliä, jonka avulla pääset kokeilemaan ohjelmointia käytännössä. Käytettävät ohjelmointikielet ovat HTML, CSS ja JavaScript. <br><br>
+      Tälle alueelle tulee jokaisen tason tehtävänanto, ohjeita ja hieman vihjeitä. Alhaalla olevaan päätteeseen tulee skriptiin liittyviä ohjeita. Ne ovat kuitenkin suuntaa antavia tai täydennettäviä, eli niitä ei kannata suoraan kopioida.<br><br>
+      Ensimmäisessä tehtävässä aloitetaan helpolla. Katso oikealla puolella olevaa aluetta. Sieltä puuttuu nappi, jota painamalla pääsisit seuraavalle tasolle. Seuraa alapuolella olevia ohjeita ja tee pelin koodiin tarvittavat muutokset:<br><br>
+       1. Avaa Visual Studio Code -ohjelma<br>
+       2. Avaa pelin kansio kohdasta File -> Open Folder -> Valitse työpöydältä kansio "Peli" ja paina Valitse Kansio"<br>
+       3. Visual Studio Coden vasemmalle puolelle pitäisi ilmestyä tiedostoja. Paina "tarinapeli.html" ja etsi TASO 1 alueelta vihreällä merkattu kohta, johon "Terminal" ikkunassa oleva koodi täytyy lisätä. Voit tämän kerran käyttää copy-pastea tai kirjoittaa koodin itse.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+&lt;button id="Aloita" onclick="aloitaPeli()"&gt;Aloita peli&lt;/button&gt;
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 1</h2>
+    <!-- CONTENT -->
+    <img src="img/Taso1.png" id="taso1kuva" alt="taso1">
+    <div class="game-workBlock__storyText">
+     Kalle istui kotona tietokoneen äärellä, kun ruutu välähti kirkkaan punaisena. Viesti ilmestyi: "Hei Kalle. Haluatko löytää koulun salaisuudet? Ensimmäinen vihje odottaa luokassa 101." 
+      <div class="game-workBlock__interactive">
+        <!-- LAITA KOODI ALLA OLEVIEN RIVIEN VÄLIIN -->
+        <!-- BEGIN -->
+         
+        <!-- END -->
+      </div>
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 2
+--------->
+
+<template id="level_2">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Hienoa. Pääsit seuraavalle tasolle. Tässä tehtävässä oikealla puolella oleva teksti ei näy ollenkaan, koska joku on räpeltänyt pelin CSS-tiedostoa ja ajatuksissaan asettanut tekstille väärän värin.<br><br>
+    Korjaa CSS-tiedostossa oleva koodi niin, että väri muuttuu valkoiseksi. Toki voit halutessasi käyttää jotakin muuta väriä.<br><br>
+    1. Etsi Visual Studio Coden vasemmalta puolelta "pelinCSS.css" tiedosto ja avaa se.<br>
+    2. Etsi tason 2 tekstiin viittaava kohta ja tee tarvittavat muokkaukset. Katso vinkkejä terminalista.<br>
+    3. Kun olet valmis, niin paina "Päivitä" ja katso muuttuuko väri.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+Värin voi määritellä hex-koodilla tai englanninkielisellä värinimellä.  Valkoisen hex-koodi on #FFFFFF ja englanniksi white.
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 2</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso2.png" id="taso2kuva" alt="taso2">
+    <div class="game-workBlock__storyText" id="taso2väri">
+      Kalle saapui luokkaan. Pöydällä odotti pieni laatikko ja kartta, johon oli merkitty punainen piste. Viesti kertoi: "Olet ottanut ensimmäisen askeleen. Seuraava vihje odottaa paikassa, jossa hiljaisuus kaikuu."
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 3
+--------->
+
+<template id="level_3">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Jaahas. Oikealla pitäisi näkyä kuva, mutta jostain syystä se ei lataudu lainkaan.<br>
+    Vertaa tason 3 HTML-koodia muiden tasojen koodeihin ja tee tarvittavat korjaukset, jotta kuva saadaan näkyviin.<br><br>
+    1. Avaa "tarinapeli.html" tiedosto ja etsi sieltä tason 3 koodi.<br>
+    2. Lisää kuva käyttämällä &lt;img&gt;-tägiä.<br>
+    3. Muista lisätä kuvalle <b>id="taso3kuva"</b> ja <b>alt="taso3"</b>. Ota tarvittaessa mallia terminalista.<br>
+    4. Paina "Päivitä" ja katso tuleeko kuva näkyviin.<br><br>
+    HUOM! HTML ei ole merkkikokoriippuvainen, mutta CSS ja JavaScript puolestaan ovat. Jos kuvalle annettu id ei ole täysin identtinen CSS-tiedostoon lisätyn valitsimen kanssa, niin kuvan ulkoasuun tehdyt muokkaukset eivät toimi. Varmista, että kirjoitat ID:n pienellä.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+Kuva lisätään kirjoittamalla:
+&lt;img src="reitti kuvaan" id="kuvanid" alt="taso3"&gt;
+
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 3</h2>
+    <!-- CONTENT -->
+     <img>
+    <div class="game-workBlock__storyText">
+      Hiljaisessa kirjastossa Kalle huomasi yhden hyllyn olevan hieman siirtynyt. Sen takaa löytyi muistitikku ja uusi viesti: "Seuraava solmu odottaa paikassa, jossa koulun tarinat elävät."
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 4
+--------->
+
+<template id="level_4">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Jostain syystä kuva on aivan liian iso. Korjaa kuva niin, että se ei vie koko näyttöä.<br><br>
+    1. Avaa pelinCSS.css<br>
+    2. Etsi tason 4 kuvaan liittyvä koodi ja tee tarvittavat muutokset. Jos sellaista ei ole, niin lisää koodi itse.<br>
+    3. Paina "Päivitä" ja katso toimiiko tekemäsi muutos.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+Kuvan koko voidaan määrittää käyttämällä width- ja height-attribuutteja. Voit kokeilla miten eri arvot vaikuttavat kuvan kokoon.
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 4</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso4.png" id="taso4kuva" alt="taso4">
+    <div class="game-workBlock__storyText">
+      Vanha juhlasali oli pölyinen ja tyhjä. Lavalle jätetty pöytä paljasti arkistokansion, jonka viesti kuului: "Hyvä, Kalle. Nyt olet osa peliä. Löydätkö seuraavan vihjeen?"
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 5
+--------->
+
+<template id="level_5">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Muokataan hieman tämän tason tekstiä. Kukaan ei enää kirjoita kaunolla. Muokkaa tekstin fonttia ja väriä, niin että font-family on 'Brush Script MT', haluamasi väri ja fonttikoko esimerkiksi 30 pikseliä.<br><br>
+    1. Etsi tason 5 koodista <b>div class="game-workBlock_storyText"</b> id.<br>
+    2. Avaa "pelinCSS.css" ja lisää alimmaksi uusi valitsin, jossa käytät diville annettua id:tä.<br>
+    3. Lisää valitsimen kaarisulkujen sisälle yllä annetut määritykset. Käytä terminalia apunasi.<br>
+    4. Paina "Päivitä" ja katso miten teksti muuttuu.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+font-family:
+color:
+font-size:
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 5</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso5.png" id="taso5kuva" alt="taso5">
+    <div class="game-workBlock__storyText" id="tehtävä5teksti">
+      Musiikkiluokassa Kalle huomasi vanhan pianon kannen alla pienen laatikon. Siinä oli muistitikku ja symboli: ympyrä salaman kanssa.
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 6
+--------->
+
+<template id="level_6">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Testataan hieman CSS:n animointia.<br><br>
+    Kuvalle on annettu id "taso6kuva". Tee kuvalle animaatio, jonka avulla kuva ilmestyy näkyviin häivytyksestä 5s aikana.<br>
+    Animaation tyyppinä käytetään <b>fadeIn</b><br>
+    Tahtina <b>ease</b>.<br>
+    Ajaksi <b>5s</b>.<br><br>
+    Animaation tekemiseen tarvitaan @keyframes-sääntöä, joka määrittelee animaation vaiheet.<br> Animaatio alkaa tyhjästä, kun opacityn aloitusarvoksi annetaan 0. Animaatio päättyy, kun opacity saavuttaa lopetusarvon 1. Keyframesissa animaation tyyppi on <b>fadeIn</b>.<br><br>
+  
+    1. Avaa pelinCSS.css tiedosto ja lisää listan alimmaksi tarvittava koodi, jonka voit kopioida terminalista.<br>
+    2. Lisää #taso6kuvan animaatioon tarvittavat arvot tyyppi, tahti ja aika.<br>
+    3. Korvaa @keyframesin aloitus- ja lopetusarvot yläpuolella mainituilla numeroilla.<br>
+    4. Paina "Päivitä" ja katso toimiiko tekemäsi animaatio.<br>
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+#taso6kuva {
+  animation: tyyppi tahti ja aika
+}
+
+@keyframes tyyppi {
+    from {
+        opacity: aloitusarvo ;
+    }
+    to {
+        opacity: lopetusarvo;
+    }
+}
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 6</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso6.png" id="taso6kuva" alt="taso6">
+    <div class="game-workBlock__storyText">
+      Kellari oli pimeä ja kylmä. Kalle löysi laatikon metalliluukusta - sisällä oli muistitikku ja viesti: "Seuraa merkkejä ja yhdistä ne. Totuus alkaa paljastua."
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 7
+--------->
+
+<template id="level_7">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Kokeillaan seuraavalla tasolla hieman Javascriptin perustoimintoja. Tee kuvalle klikkaustoiminto, joka himmentää kuvan näkyvyyden 50% ja palauttaa sen takaisin alkuperäiseen tilaan, kun kuvaa klikataan uudelleen. Opacity-arvoja voi muuttaa välillä 0 ja 1.<br><br>
+    1. Etsi tarinapeli.html tiedostosta tason 7 koodi.<br>
+    2. Lisää script-tägien sisälle terminalissa näkyvä koodi. Vain kysymysmerkillä merkattuihin kohtiin tarvitsee tehdä muutoksia.<br>
+    3. <b>const</b>-muuttujaa käytetään arvojen määrittelemiseen, johon myöhemmin voidaan viitata. Korvaa const jälkeinen kysymysmerkki sanalla "kuva" (ilman lainausmerkkejä). Tulet viittaamaan siihen myöhemmissä vaiheissa.<br>
+    4. <b>document.getElementById("")</b> hakee HTML-tiedostosta elementin sen ID:n avulla. Tässä kohtaa halutaan käyttää tason 7 kuvan id:tä.<br>
+    5. <b>addEventListener</b> on tapahtumakäsittelijä, jota käytetään liittämään tapahtuma haluttuun elementtiin. Jotta tapahtumakäsittelijä saadaan toimimaan, niin addEventListenerissä täytyy käyttää const kohdassa asetettua muuttujaa ja sulkujen sisälle <b>click</b>, jotta funktiosta saadaan klikattava.<br>
+    6. <b>if ja else</b> ovat ehtolausekkeita. Jotta skripti tietäisi minkä elementin tyylin halutaan muuttuvan sitä klikatessa, niin <b>.style.opacity</b> täytyy käyttää const-muuttujaa, joka määriteltiin skriptin ensimmäisellä rivillä.<br>
+    7. Lopuksi <b>.style.opacity</b>:lle täytyy asettaa arvot. Jos halutaan, että kuva on ennen klikkausta täysin näkyvissä, niin oletusarvoksi on asetettava 1. Kun kuvaa klikataan, niin skripti vaihtaa arvon 0. <b>Else</b> kohdassa skripti palauttaa arvon 1, jos 0 on jo käytössä.<br>
+    8. Paina "Päivitä" ja kokeile toimiiko tekemäsi skripti.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const ? = document.getElementById("?");
+?.addEventListener("?", function() {
+  if (?.style.opacity === "?") {
+    ?.style.opacity = "?";
+  } else {
+    ?.style.opacity = "?";
+  }
+  resolve();
+});
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+      // BEGIN
+        
+      // END
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 7</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso7.png" id="taso7kuva" alt="taso7">
+    <div class="game-workBlock__storyText">
+      Varaston nurkassa odotti seuraava vihje. Siellä oli paperi, jossa luki: "Olet lähellä keskusta. Mutta oletko valmis seuraavaan testiin?"
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 8
+--------->
+
+<template id="level_8">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Yritetään hieman animointia Javascriptillä.<br><br>
+    Tee kuvalle ajastettu animaatio, joka tuo kuvan esiin 5 sekunnin kuluttua sivun lataamisesta. setTimeout()-funktio auttaa tässä tehtävässä. Jos opacityn arvo on 0, niin kuva on täysin näkymätön. Jos arvo on 1, niin kuva on täysin näkyvissä.<br><br>
+    1. Etsi tarinapeli.html tiedostosta tason 8 koodi.<br>
+    2. Lisää script-tägien sisälle terminalissa näkyvä koodi. Vain kysymysmerkillä merkattuihin kohtiin tarvitsee tehdä muutoksia.<br>
+    3. Määritä const-muuttujalle arvoksi <b>kuva</b> ja anna <b>document.getElementById("?")</b> id, jota skriptin halutaan käyttävän.<br>
+    4. Anna <b>?.style.opacity</b>:lle määrittelemäsi muuttuja ja aloitusarvo.<br>
+    5. Kuten edellisessä kohdassa, lisää <b>?.style.transition</b>:ille määrittelemäsi muuttuja.<br>
+    6. Jotta <b>style.transition</b> toimisi halutulla tavalla, niin sille täytyy määrittää hieman enemmän ominaisuuksia. Kirjoita "" sisällä olevan kysymysmerkin tilalle <b>opacity 0.5s ease-in-out</b>.<br>
+    7. Anna opacitylle lopetusarvo, johon animaatio päättyy kun kuva on näkyvä.
+    8. Jotta ajastin saadaa toimimaan, niin korvaa viimeinen kysymysmerkki luvulla 5000. setTimeout-funktio käyttää millisekunteja.<br>
+    9. Paina "Päivitä" ja katso toimiiko tekemäsi skripti.
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const ? = document.getElementById("?");
+?.style.opacity = "?";
+
+setTimeout(function() {
+  ?.style.transition = "?";
+  ?.style.opacity = "?";
+  resolve();
+}, ? );
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+      // BEGIN
+        
+      // END
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 8</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso8.png" id="taso8kuva" alt="taso8">
+    <div class="game-workBlock__storyText">
+      Kalle palasi juhlasaliin. Pöydän alla odotti arkistokansion toinen osa, jossa näkyi ryhmä oppilaita vuosien takaa - kaikki kasvot peitetty. Viesti kertoi: "Varjoverkko ei unohda."
+    </div>
+  </story>
+  
+ </template>
+
+<!-------
+  TASO 9
+--------->
+
+<template id="level_9">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+      Olet ylittänyt melkein kaikki haasteet. Muokataan lopuksi HTML-tekstiä yhdistämällä Javascriptin toimintoa ja CSS:n animointia. Tuloksena saat vaihdettu teksti, joka vie sinut seuraavaan tasoon.<br><br>
+      1. Etsi tarinapeli.html tiedostosta tason 9 koodi.<br>
+      2. Kopioi terminalissa näkyvä koodi ja lisää sen script-tägien sisälle.<br>
+      3. Avaa pelinCSS.css<br>
+      4. Etsi lohko #tehtävä9teksti ja poista siitä kommentit.
+      5. Paina "Päivitä" ja nauti skriptin toiminnasta. Huomaatko muutoksia 😉️?
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const teksti = document.querySelector(".game-workBlock__storyText");
+teksti.textContent = `“Seuraa ääntä. Totuus odottaa siellä, missä kaikki hiljenee.”
+Hetken kuluttua näyttö pimeni, ja jäljelle jäi vain kartan koordinaatti – koulun piha.`;
+teksti.id = "tehtävä9teksti";
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+        requestAnimationFrame(() => {
+        // BEGIN
+            
+        // END
+          resolve();
+        });
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 9</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso9.png" id="taso9kuva" alt="taso9">
+    <div class="game-workBlock__storyText">
+      Kallen käteen ilmestyi viimeinen muistitikku. Sen viesti oli yksinkertainen: "Olet kerännyt kaikki vihjeet. Nyt seuraa karttaa viimeiseen paikkaan."
+    </div>
+  </story>
+
+ </template>
+
+<!-------
+  TASO 10
+--------->
+
+<template id="level_10">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+    Hienoa! Pääsit pelin loppuun.<br><br>
+    Kuten huomasit, ohjelmointi on hauskaa ja luovaa.<br> Peliä pelaamalla pääsit kokeilemaan ohjelmoinnin perusteita HTML-, JavaScript- ja CSS-kielillä, jotka ovat web-kehityksen peruspilareita.<br><br>
+    <b>HTML</b><br><br>
+    HTML (HyperText Markup Language) on verkkosivujen rakenne- ja kuvauskieli, jota käytetään määrittelemään, miten sisältö (kuten teksti, img ja linkit) esitetään selaimessa.<br><br>
+
+    <b>CSS</b><br><br>
+    CSS (Cascading Style Sheets) on tyylikieli, jota käytetään verkkosivujen ulkoasun ja asettelun muotoiluun. Se erottaa sisällön (HTML) ulkoasusta, mikä tekee verkkosivustojen ylläpidosta ja muokkaamisesta joustavampaa, ja sitä voidaan käyttää esimerkiksi tekstin värien, fonttien, taustojen ja elementtien sijoittelun määrittämiseen.<br><br>
+    
+    <b>JavaScript</b><br><br>
+    JavaScript on ohjelmointikieli, jota käytetään verkkosivujen tekemiseen interaktiivisiksi ja dynaamisiksi, lisäten toiminnallisuutta, jota HTML ja CSS eivät yksin voi tarjota. Sitä käytetään myös muissa ympäristöissä, kuten pelien ja mobiilisovellusten kehityksessä.<br><br>
+    Ohjelmointikieliä on lähemmäs 8000 ja uusia kieliä<br> syntyy jatkuvasti. Jokaisella kielellä on omat käyttötarkoituksensa.
+    </div>
+
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 10</h2>
+    <!-- CONTENT -->
+     <img src="img/Taso10.png" id="taso10kuva" alt="taso10">
+    <div class="game-workBlock__storyText">
+      Kaikki merkit johtivat koulun pihalle. Kalle tuijotti ympärilleen - ei ketään näkyvissä. Hän ei tiennyt, kuka oli lähettänyt viestit, eikä mitä odottaa seuraavaksi… mutta peli oli vasta alkanut.
+    </div>
+  </story>
+
+ </template>
+
+<!---------------------------
+  END TARINAPELI GAME LEVELS
+---------------------------->
+
+
+  <!-- MAIN WRAPPER -->
+  <div class="game-wrapper">
+
+    <!-- GAME TASK DESCRIPTION -->
+    <div class="game-descBlock" id="descBlock">
+      <!-- CONTENT GOES HERE BY THE JS -->
+    </div>
+
+    <!-- GAME IMPLEMENTATION BLOCK -->
+    <div class="game-workBlock-wrapper">
+      <div class="game-workBlock__content" id="workBlock">
+        <!-- CONTENT GOES HERE BY THE JS -->
+      </div>
+      <div class="game-workBlock__controls">
+        <button class="gameBtn_reload" type="button" id="reloadBtn">Päivitä</button>
+        <button class="gameBtn_next" type="button" id="nextBtn" disabled>Seuraava</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS SCRIPTS -->
+   <script src="./js/game_handler.js"></script>
+
+</body>
+</html>

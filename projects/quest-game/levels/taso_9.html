@@ -1,0 +1,50 @@
+<!-------
+  TASO 9
+--------->
+
+<template id="level_9">
+
+  <!-- GAME TASK DESCRIPTION (OHJEET) -->
+  <task>
+    <!-- CONTENT -->
+    <div class="game-descBlock__descText">
+      Olet ylittänyt melkein kaikki haasteet. Muokataan lopuksi HTML-tekstiä yhdistämällä Javascriptin toimintoa ja CSS:n animointia. Tuloksena saat vaihdettu teksti, joka vie sinut seuraavaan tasoon.<br><br>
+      1. Etsi tarinapeli.html tiedostosta tason 9 koodi.<br>
+      2. Kopioi terminalissa näkyvä koodi ja lisää sen script-tägien sisälle.<br>
+      3. Avaa pelinCSS.css<br>
+      4. Etsi lohko #tehtävä9teksti ja poista siitä kommentit.
+      5. Paina "Päivitä" ja nauti skriptin toiminnasta. Huomaatko muutoksia 😉️?
+    </div>
+    <!-- CODE EXAMPLE TO BE IMPLEMENTED BY THE USER -->
+    <div class="game-descBlock__codeSnippet">
+      <pre><code>
+const teksti = document.querySelector(".game-workBlock__storyText");
+teksti.textContent = `“Seuraa ääntä. Totuus odottaa siellä, missä kaikki hiljenee.”
+Hetken kuluttua näyttö pimeni, ja jäljelle jäi vain kartan koordinaatti – koulun piha.`;
+teksti.id = "tehtävä9teksti";
+      </code></pre>
+    </div>
+  </task>
+
+  <!-- GAME WORK BLOCK CONTENT (TARINA STORY) -->
+  <story>
+    <script>
+      window.levelScriptPromise = new Promise((resolve) => {
+        requestAnimationFrame(() => {
+        // BEGIN
+            
+        // END
+          resolve();
+        });
+      });
+    </script>
+     <!-- HEADER -->
+    <h2 class="game-workBlock__header">Taso 9</h2>
+    <!-- CONTENT -->
+     <img src="kuvat/Taso9.png" id="taso9kuva" alt="taso9">
+    <div class="game-workBlock__storyText">
+      Kallen käteen ilmestyi viimeinen muistitikku. Sen viesti oli yksinkertainen: "Olet kerännyt kaikki vihjeet. Nyt seuraa karttaa viimeiseen paikkaan."
+    </div>
+  </story>
+
+ </template>

@@ -1,0 +1,372 @@
+/*--------------------------------------------
+  Stylesheet for []
+--------------------------------------------*/
+
+/*------------------------
+  GENERAL SHARED STYLES
+----------------------- */
+* {
+  box-sizing: border-box;
+}
+
+/* This using for variables initializing */
+:root {
+  --flex-gap-space: 1.25rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+/*------------------------
+  CONTAINERS
+----------------------- */
+.game__main-container_start {
+  height: 100vh;
+  justify-content: center;
+}
+
+.game__main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem;
+  padding-bottom: 6rem; /* For visible statistics */
+  position: relative;
+}
+
+.game__main-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke url("./../img/bg-1.jpg") center / cover;
+  opacity: 0.3;
+}
+
+/* Hidden by start */
+.game-block__container_hidden {
+  display: none;
+}
+
+/* Opened when start button pressed */
+.game-block__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--flex-gap-space);
+  width: 80%;
+}
+
+.game__desc-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-block__cell {
+  flex: 0 0 calc(100% / 3 - var(--flex-gap-space));
+  padding: 1rem;
+  background-color: #FFFFF0;
+  border-radius: 0.35rem;
+  box-shadow: -2px 2px 2px 0 #F6EFD2, 2px -2px 2px 0 #F6EFD2;
+  cursor: pointer;
+  font-family: "Comic Relief", system-ui;
+  font-size: 1.3rem;
+}
+
+/* First cell */
+.game-block__cell_start {
+  background-color: #8AA624;
+}
+
+/* Last cell */
+.game-block__cell_finish {
+  background-color: #E43636;
+}
+
+/* Typing machine */
+.game-block__cell:nth-child(3) {
+  background: url("./../img/typing\ machine.jpg") center / cover;
+}
+
+/* Treasure island */
+.game-block__cell:nth-child(4) {
+  background: url("./../img/treasure\ island.jpg") center / cover;
+}
+
+/* Chest */
+.game-block__cell:nth-child(8) {
+  background: url("./../img/chest-3.jpg") center / cover;
+}
+
+/* Second cell - onclick */
+.game-block__cell_click {
+  background: url("./../img/treasure-opened.jpg") center / cover;
+}
+
+/* Sixth cell */
+.game-block__cell_mouseup {
+  background: url("./../img/surprise-1.jpg") center / cover;
+}
+
+/* Seventh cell */
+.game-block__cell_contextmenu {
+  background: url("./../img/adventure-sea-1.jpg") center / cover;
+}
+
+/*------------------------
+  INTERACTIVITY WITH USER
+----------------------- */
+/* Hidden by start */
+.game__user-interact-box_hidden {
+  display: none;
+}
+
+/* Opened when start button pressed */
+.game__user-interact-box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F6EFD2;
+  border: 2px solid #FEA405;
+  border-radius: 0.35rem;
+}
+
+/* Highlight the box when user choose next block */
+.game__user-interact-box_highlight {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.game__user-interact-box > label {
+  display: none;
+}
+
+/* input field */
+#game__user-interact-input {
+  outline: none;
+  border: none;
+  border-radius: 0.35rem;
+  padding: 0.75rem;
+  background-color: #F6EFD2;
+  color: #E43636;
+  font-family: "Comic Relief", system-ui;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#game__user-interact-input::placeholder {
+  color: #E43636;
+  font-weight: normal;
+}
+
+#game__user-interact-input:focus {
+  text-transform: uppercase;
+  background-color: #E2DDB4;
+}
+
+/* Check answer button */
+#game__user-interact-btn {
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+#game__user-interact-btn:hover {
+  background-color: #8AA624;
+  opacity: 0.6;
+}
+
+/* Notification box. Showing when user answered the question */
+.game__user-notify {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.5s ease-out;
+  pointer-events: none;
+  padding: 1.5rem 1rem;
+  border-radius: 0.35rem;
+  font-family: "Ribeye Marrow", system-ui;
+  font-weight: bold;
+  color: white;
+}
+
+.game__user-notify_show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.game__user-notify_correct {
+  background-color: #8AA624;
+}
+
+.game__user-notify_wrong {
+  background-color: #E43636;
+}
+
+/*------------------------
+  HEADERS
+----------------------- */
+/* Game's name */
+.game__name-head {
+  font-family: "Ribeye Marrow", system-ui;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #FEA405;
+  text-align: center;
+}
+
+/* Game's description */
+.game__desc-head {
+  font-family: "Comic Relief", system-ui;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: bold;
+  color: gray;
+  margin: 0;
+  text-align: center;
+}
+
+/* Game's rules */
+.game__desc-list {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.35rem;
+  box-shadow: -2px 2px 2px 0 #F6EFD2, 2px -2px 2px 0 #F6EFD2;
+  list-style: "\1F538"; /*🔸*/
+  list-style-position: inside;
+  font-family: "Comic Relief", system-ui;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: gray;
+  background-color: #E2DDB4;
+}
+
+/* Start a game button */
+#game__desc-btn {
+  border: 2px solid #FEA405;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 10px 5px #FEA405;
+  cursor: pointer;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-family: "Ribeye Marrow", system-ui;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: #F6EFD2;
+  color: #E43636;
+  animation: float 2s ease-in-out infinite;
+  transition: 0.5s;
+}
+
+#game__desc-btn:hover {
+  animation: none;
+  box-shadow: 0 0 20px 10px #FEA405;
+  background-color: #FEA405;
+  color: white;
+  transform: scale(1.2);
+}
+
+/*------------------------
+  GAME STATISTICS
+----------------------- */
+/* Hidden by start */
+.game__stats-footer_hidden {
+  display: none;
+}
+
+/* Opened when start button pressed */
+.game__stats-footer {
+  margin-top: 2rem;
+  font-family: "Comic Relief", system-ui;
+  font-size: 1.5rem;
+  color: gray;
+}
+
+#game__stats-counter {
+  color: #FEA405;
+  font-weight: bold;
+}
+
+/*------------------------
+  CUSTOMIZATIONS
+----------------------- */
+/* Special characters (e.g. emoji) */
+.game-block__spec-char {
+  font-size: 2rem;
+}
+
+/* Focused cell */
+.game-block__cell-focused {
+  outline: 2px solid #E43636;
+}
+
+/* Text highlights */
+.game-block__hightlight_orange {
+  padding: 0 0.3rem;
+  border-radius: 0.35rem;
+  background-color: #FEA405;
+}
+
+.game-block__hightlight_white {
+  border-radius: 0.35rem;
+  background-color: #FFFFF0;
+}
+
+/* Highlighted text inside the focused block */
+.game-block__cell-highlight {
+  display: inline-block;
+  padding: 0 0.3rem;
+  border-radius: 0.35rem;
+  background-color: #FEA405;
+}
+
+/* Capital word highlightment */
+.game-block__cell-capital-highlight {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #FFFFF0;
+}
+
+/*------------------------
+  ANIMATIONS
+----------------------- */
+/* Interactive box */
+@keyframes bounce {
+  0%    { box-shadow: 0 0 20px 10px #FEA405; }
+  50%   { box-shadow: none; }
+  100%  { box-shadow: 0 0 20px 10px #FEA405; }
+}
+
+/* Start game button */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*------------------------
+  RESPONSIVE
+----------------------- */
+
+/* screens larger then 1600px */
+@media (min-width: 1400px) {
+  .game-block__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

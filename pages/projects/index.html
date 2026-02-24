@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  
+  <title>VitaVlas. Frontend developer.</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/media.css">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-row">
+
+        <!-- Logo -->
+        <a href="/" class="nav__logo">
+          <strong>vita &gt;</strong> vlas
+        </a>
+
+        <!-- Dark mode toogle -->
+        <button class="dark-mode-btn">
+          <img src="/img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
+          <img src="/img/icons/moon.svg" alt="Night mode" class="dark-mode-btn__icon">
+        </button>
+
+        <!-- Menu -->
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="/" class="nav-list__link">Projects</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="/pages/skills/" class="nav-list__link">Skills</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="/pages/about/" class="nav-list__link">About</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROJECT -->
+  <main class="section">
+    <div class="container">
+      <div class="project-details">
+        <h2 class="section-title" data-project="title">Demo Project</h2>
+        <a href="/projects/demo/" data-project="link" target="_blank" title="Click to open live demo in a new tab">
+          <img src="/img/projects/demo-big.jpg" alt="Demo project" class="project-details__cover" data-project="image">
+        </a>
+
+        <div class="project-details__desc">
+          <p data-project="content">Demo project description.</p>
+          <p data-project="stack"><strong>Stack: </strong> HTML, CSS, JS</p>
+        </div>
+
+        <a href="#!" target="_blank" rel="noopener noreferrer" class="btn-outline" data-project="git" title="Click to view project on GitHub">
+          <img src="/img/icons/gitHub-black.svg" alt="GitHub">
+          GitHub repo
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+
+        <ul class="social">
+
+          <li class="social__item">
+            <a href="https://github.com/vitavlas" target="_blank" title="GitHub">
+              <img src="/img/icons/gitHub.svg" alt="GitHub">
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/vitavlas/" target="_blank" title="LinkedIn">
+              <img src="/img/icons/linkedIn.svg" alt="LinkedIn">
+            </a>
+          </li>
+
+          <li class="social__item" title="Email me">
+            <a href="mailto:vitavlas89@gmail.com">
+              <img src="/img/icons/email.svg" alt="Email">
+            </a>
+          </li>
+
+        </ul>
+        <div class="copyright">
+          <p>&copy; 2026 Vitaly Vlasov</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/project_page.js"></script>
+
+</body>
+</html>

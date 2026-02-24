@@ -1,0 +1,63 @@
+.card-trainer {
+  position: relative;
+  display: block;
+  max-width: 268px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-trainer::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  transition: all 0.2s ease-in;
+}
+
+.card-trainer:hover::before {
+  opacity: 1;
+}
+
+.card-trainer:hover .card-trainer__caption {
+  opacity: 1;
+  top: 50%;
+}
+
+.card-trainer__caption {
+  opacity: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-accent);
+  font-size: clamp(1.75rem, 1.432rem + 1.59vw, 2.625rem);
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+
+  transition: all 0.2s ease-in;
+}
+
+/* Responsive */
+
+@media (hover: none) and (pointer: coarse) {
+  .card-trainer__caption {
+    opacity: 1;
+    top: 50%;
+  }
+
+  .card-trainer::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-trainer {
+    border-radius: 10px;
+  }
+}

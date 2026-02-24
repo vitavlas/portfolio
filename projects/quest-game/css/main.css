@@ -1,0 +1,256 @@
+/* --------------------------------------
+    TARINAPELI - stylesheet
+-------------------------------------- */
+
+/* EXTERNAL CSS FILES */
+@import "./game_styles.css";
+
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #d0bdf4;
+  color: #31363F;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+/* MAIN WRAPPER */
+.game-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0F0F0F;
+}
+
+/* LEFT BLOCK. TASK DESCRIPTION */
+.game-descBlock {
+  display: flex;
+  word-break: normal;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 30%;
+  height: fit-content;
+  margin: 2% 2% 0 2%;
+  padding: 2rem;
+  background-color: #e5eaf5;
+  line-height: 1.5rem;
+}
+.game-descBlock__descText, .game-descBlock__codeSnippet {
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  word-break: normal;
+}
+.game-descBlock__descText {
+  color: #31363F;
+}
+.game-descBlock__codeSnippet {
+  position: relative;
+  align-self: flex-start;
+}
+.game-descBlock__codeSnippet::before {
+  content: "Terminal";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Audiowide", sans-serif;
+  padding: 0.5rem 0 0.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #31363F;
+  color: #e5eaf5;
+}
+.game-descBlock__codeSnippet pre {
+  white-space: pre-wrap;
+  background-color: #0F0F0F;
+  color: #a28089;
+  padding: 2rem 2rem 0.5rem 2rem;
+}
+.game-descBlock__codeSnippet code::selection {
+  color: #8458B3;
+  background-color: #31363F;
+}
+
+/* RIGHT BLOCK. GAME IMPLEMENTATION BLOCK */
+.game-workBlock-wrapper {
+  flex: 1; /* Block stays always bigger than other one */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2%;
+  padding: 2rem;
+  height: fit-content;
+  border: 1px solid #8458B3;
+  line-height: 1.5rem;
+}
+.game-workBlock__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.game-workBlock__controls {
+  display: flex;
+  justify-content: space-between;
+}
+.game-workBlock__header {
+  margin: 0;
+  padding: 0;
+  color: #8458B3;
+  font-family: "Audiowide", sans-serif;
+}
+.game-workBlock__storyText {
+  color: white;
+  padding: 0;
+}
+.game-workBlock__interactive {
+  margin: 2rem 0 0 0;
+}
+
+/* NOTIFICATION BOX */
+.game-notifyBox_overlay {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-notifyBox_window {
+  position: fixed;
+  width: 30%;
+  min-height: 30%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 2rem 1rem;
+  box-shadow: 2px 2px 15px #8458B3, -2px -2px 15px #d0bdf4;
+  background-color: #d0bdf4;
+  color: #0F0F0F;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.5rem;
+  animation: popIn 0.5s ease-in;
+}
+.gameBtn_close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Audiowide", sans-serif;
+  font-size: 2.5rem;
+  color: #8458B3;
+  background-color: transparent;
+}
+.gameBtn_close:hover {
+  color: #e5eaf5;
+  transform: scale(1.2);
+}
+
+/* POP-UP WINDOW (TINY) */
+.game-popUp_window {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  width: 10%;
+  height: fit-content;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+  color: #0F0F0F;
+  background-color: rgba(239, 245, 210, 0.8); /* #EFF5D2 */
+  box-shadow: 2px 2px 15px #8FA31E, -2px -2px 15px #C6D870;
+  opacity: 0;
+  animation: slideInOut 2.5s ease-out;
+}
+
+/* BUTTONS */
+.gameBtn_next, .gameBtn_reload, .gameBtn_start {
+  width: fit-content;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  background: linear-gradient(#d0bdf4, #8458B3);
+}
+.gameBtn_reload, .gameBtn_start {
+  color: #e5eaf5;
+}
+.gameBtn_next {
+  color: #31363F;
+}
+.invisible {
+  visibility: hidden;
+}
+.gameBtn_start {
+  animation: infiniteShine 2.5s ease-in-out infinite;
+}
+.gameBtn_reload:hover, .gameBtn_next:hover {
+  background-color: #8458B3;
+  box-shadow: 2px 2px 15px #8458B3, -2px -2px 15px #d0bdf4;
+}
+.gameBtn_reload:hover, .gameBtn_start:hover {
+  color: #3C0753;
+}
+.gameBtn_next:hover {
+  color: #0F0F0F;
+}
+
+/* ANIMATIONS */
+@keyframes slideInOut {
+  0% { opacity: 0; transform: translateY(-70px); }
+  35% { opacity: 1; transform: translateY(0); }
+  65% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-70px); }
+}
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes infiniteShine {
+  0% { 
+    box-shadow: none;
+    color: #3C0753;
+    transform: scale(1); 
+  }
+  50% { 
+    box-shadow: 2px 2px 15px 5px #8458B3, -2px -2px 15px 5px #d0bdf4;
+    color: #e5eaf5;
+    transform: scale(1.1); 
+  }
+  100% { 
+    box-shadow: none;
+    color: #3C0753;
+    transform: scale(1); 
+  }
+}
