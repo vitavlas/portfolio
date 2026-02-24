@@ -51,4 +51,4 @@ You can reach me via:
 
 ---
 
-Thank you for visiting my portfolio! 🚀
+Thank you for visiting! 🚀
